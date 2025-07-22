@@ -1,0 +1,81 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Theme Variables */
+:root {
+  /* Minimal Theme */
+  --theme-minimal-bg: #ffffff;
+  --theme-minimal-text: #374151;
+  --theme-minimal-heading: #111827;
+  --theme-minimal-accent: #3b82f6;
+  --theme-minimal-border: #e5e7eb;
+  
+  /* Elegant Theme */
+  --theme-elegant-bg: #fefefe;
+  --theme-elegant-text: #4a5568;
+  --theme-elegant-heading: #2d3748;
+  --theme-elegant-accent: #805ad5;
+  --theme-elegant-border: #e2e8f0;
+}
+
+.dark {
+  /* Minimal Theme - Dark */
+  --theme-minimal-bg: #1f2937;
+  --theme-minimal-text: #d1d5db;
+  --theme-minimal-heading: #f9fafb;
+  --theme-minimal-accent: #60a5fa;
+  --theme-minimal-border: #374151;
+  
+  /* Elegant Theme - Dark */
+  --theme-elegant-bg: #2d3748;
+  --theme-elegant-text: #e2e8f0;
+  --theme-elegant-heading: #f7fafc;
+  --theme-elegant-accent: #b794f6;
+  --theme-elegant-border: #4a5568;
+}
+
+/* Theme Styles */
+[data-theme="minimal"] .theme-bg { background-color: var(--theme-minimal-bg); }
+[data-theme="minimal"] .theme-text { color: var(--theme-minimal-text); }
+[data-theme="minimal"] .theme-heading { color: var(--theme-minimal-heading); font-family: 'Inter', sans-serif; }
+[data-theme="minimal"] .theme-accent { color: var(--theme-minimal-accent); }
+[data-theme="minimal"] .theme-border { border-color: var(--theme-minimal-border); }
+
+[data-theme="elegant"] .theme-bg { background-color: var(--theme-elegant-bg); }
+[data-theme="elegant"] .theme-text { color: var(--theme-elegant-text); }
+[data-theme="elegant"] .theme-heading { color: var(--theme-elegant-heading); font-family: Georgia, serif; }
+[data-theme="elegant"] .theme-accent { color: var(--theme-elegant-accent); }
+[data-theme="elegant"] .theme-border { border-color: var(--theme-elegant-border); }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
+
+/* Animations */
+@keyframes pulse-border {
+  0%, 100% { border-color: rgb(59 130 246 / 0.5); }
+  50% { border-color: rgb(59 130 246 / 1); }
+}
+
+.drag-active {
+  animation: pulse-border 2s infinite;
+}
+
+/* Focus styles */
+.focus-ring:focus-visible {
+  @apply ring-2 ring-primary-500 ring-offset-2 ring-offset-white dark:ring-offset-gray-900;
+}

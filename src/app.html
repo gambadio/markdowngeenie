@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" %sveltekit.theme%>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%sveltekit.assets%/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Convert Markdown files to Word documents instantly. Free online tool with drag-and-drop support and beautiful themes." />
+    <meta name="keywords" content="markdown to word, markdown converter, docx converter, online tool" />
+    <meta name="author" content="Markdown → Word" />
+    <link rel="canonical" href="https://markdown-to-word.app" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Markdown → Word - Free Online Converter" />
+    <meta property="og:description" content="Convert Markdown files to Word documents instantly with our free online tool." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://markdown-to-word.app" />
+    <meta property="og:image" content="https://markdown-to-word.app/og-image.jpg" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Markdown → Word - Free Online Converter" />
+    <meta name="twitter:description" content="Convert Markdown files to Word documents instantly with our free online tool." />
+    <meta name="twitter:image" content="https://markdown-to-word.app/og-image.jpg" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Markdown → Word",
+      "url": "https://markdown-to-word.app",
+      "description": "Convert Markdown files to Word documents instantly",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Drag and drop file upload",
+        "Markdown to DOCX conversion",
+        "Table of contents generation",
+        "Multiple themes"
+      ]
+    }
+    </script>
+    
+    %sveltekit.head%
+  </head>
+  <body data-sveltekit-preload-data="hover" class="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div style="display: contents">%sveltekit.body%</div>
+  </body>
+</html>
