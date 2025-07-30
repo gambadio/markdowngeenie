@@ -1,0 +1,1 @@
+Markdown Genie instantly converts Markdown files to beautifully formatted Word documents through an intuitive online interface. Features include live editing, drag-and-drop upload, responsive themes, automatic table of contents generation—all client-side for privacy.
